@@ -8,7 +8,7 @@ export const fetchBeerBegin = () => ({
 
 export const fetchBeerSuccess = beers => ({
   type: FETCH_BEER_SUCCESS,
-  payload: { products }
+  payload: { beers }
 })
 
 export const fetchBeerFailure = error => ({
