@@ -1,37 +1,38 @@
 import {
-  FETCH_BEER_BEGIN,
-  FETCH_BEER_SUCCESS,
-  FETCH_BEER_FAILURE
+  FETCH_BEERS_BEGIN,
+  FETCH_BEERS_SUCCESS,
+  FETCH_BEERS_FAILURE
 } from '../__actions/beerActions'
 
 const initialState = {
-  items: [],
+  beers: [],
   loading: false,
   error: null,
 }
 
 export default function shopReducer(state = initialState, action) {
   switch(action.type) {
-    case FETCH_BEER_BEGIN:
-     return {
+    case FETCH_BEERS_BEGIN:
+    return {
        ...state,
        loading: true,
        error: null
      };
 
-     case FETCH_BEER_SUCCESS:
+     case FETCH_BEERS_SUCCESS:
+     console.log('ACTION BEER SUCCESS', action)
       return {
         ...state,
         loading: false,
-        items: action.payload.beers
+        beers: action.payload.beers
       };
 
-     case FETCH_BEER_FAILURE:
+     case FETCH_BEERS_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload.error,
-        item: []
+        beers: []
       };
 
       default:
