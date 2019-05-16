@@ -6,31 +6,31 @@ import {
 
 const initialState = {
   beers: [],
-  loading: false,
+  // loading: false,
   error: null,
 }
 
-export default function shopReducer(state = initialState, action) {
+export default function beerReducer(state = initialState, action) {
   switch(action.type) {
     case FETCH_BEERS_BEGIN:
-    return {
-       ...state,
-       loading: true,
-       error: null
-     };
-
-     case FETCH_BEERS_SUCCESS:
-     console.log('ACTION BEER SUCCESS', action)
       return {
         ...state,
-        loading: false,
-        beers: action.payload.beers
+        // loading: true,
+        error: null
+      };
+
+     case FETCH_BEERS_SUCCESS:
+      return {
+        ...state,
+        // loading: false,
+        beers: action.payload.beers,
+        error: null
       };
 
      case FETCH_BEERS_FAILURE:
       return {
         ...state,
-        loading: false,
+        // loading: false,
         error: action.payload.error,
         beers: []
       };
