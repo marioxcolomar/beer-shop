@@ -23,8 +23,8 @@ export function fetchBeers() {
       .then(handleErrors)
       .then(res => res.json())
       .then(json => {
-        dispatch(fetchBeersSuccess(json.beers))
-          return json.beers
+        dispatch(fetchBeersSuccess(json))
+          return json
       })
       .catch(error => dispatch(fetchBeersFailure(error)))
   }
