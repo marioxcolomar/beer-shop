@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class ItemCard extends Component {
-  render() {
-    return (
-      <div>
-        <p>ItemCard component</p>
-      </div>
-    )
-  }
+const ItemCard = ({ imgSrc, name, description }) => {
+  return (
+    <div id='item-card'>
+      <div className='img' style={{ backgroundImage: `${imgSrc}` }}></div>
+      <strong>{name}</strong>
+      <p>{description}</p>
+    </div>
+  )
 }
+
+export default ItemCard

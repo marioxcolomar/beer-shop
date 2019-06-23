@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   beers: [],
-  // loading: false,
+  loading: false,
   error: null,
 }
 
@@ -15,22 +15,22 @@ export default function beerReducer(state = initialState, action) {
     case FETCH_BEERS_BEGIN:
       return {
         ...state,
-        // loading: true,
+        loading: true,
         error: null
       };
 
      case FETCH_BEERS_SUCCESS:
       return {
         ...state,
-        // loading: false,
-        beers: action.payload.beers,
+        loading: false,
+        beers: action.payload,
         error: null
       };
 
      case FETCH_BEERS_FAILURE:
       return {
         ...state,
-        // loading: false,
+        loading: false,
         error: action.payload.error,
         beers: []
       };

@@ -5,13 +5,13 @@ import * as shopActions from '../__actions/shopActions'
 
 import ShopComponent from '../components/Shop'
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     beers: state.beers,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     beerActions: bindActionCreators(beerActions, dispatch),
     shopActions: bindActionCreators(shopActions, dispatch),
