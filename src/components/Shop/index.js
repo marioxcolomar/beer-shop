@@ -15,13 +15,16 @@ class Shop extends Component {
         <p>Hello, Beer Shop</p>
         <ShopList>
         {
-          beers.map(b => {
+          beers && beers.map(b => {
             console.log("TCL: Shop -> render -> b", b)
             return (
-              <ItemCard />
+              <ItemCard
+                imgSrc={b.imgSrc}
+                name={b.name}
+                description={b.description}
+              />
             )
-          }
-          )
+          })
         }
         </ShopList>
       </div>
