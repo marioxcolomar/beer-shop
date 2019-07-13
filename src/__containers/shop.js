@@ -7,7 +7,7 @@ import ShopComponent from '../components/Shop'
 
 const mapStateToProps = (state) => {
   return {
-    beers: state.beers,
+    beers: state.beers.beers.beers,
   }
 }
 
