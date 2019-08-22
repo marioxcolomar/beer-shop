@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ItemCard from '../ItemCard'
+import ShopItem from '../ShopItem'
 import ShopList from '../ShopList/index'
 
 class Shop extends Component {
@@ -15,11 +15,11 @@ class Shop extends Component {
         <p>Hello, Beer Shop</p>
         <ShopList>
         {
-          beers && beers.map(b => {
-            console.log("TCL: Shop -> render -> b", b)
+          beers && beers.map((b, i) => {
             return (
-              <ItemCard
-                imgSrc={b.imgSrc}
+              <ShopItem
+                key={i}
+                imgSrc={b.image_url}
                 name={b.name}
                 description={b.description}
               />
