@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './styles.scss'
+
 const ShopList = ({ title, children }) => {
   return (
     <div className='shop-list'>
