@@ -6,8 +6,7 @@ const ShopItem = ({ imgSrc, name, description }) => {
   return (
     <div id='item-card'>
       <img alt={imgSrc} src={imgSrc} />
-      <strong>{name}</strong>
-      <p>{description}</p>
+      <h3>{name}</h3>
     </div>
   )
 }
