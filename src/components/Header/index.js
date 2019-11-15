@@ -5,7 +5,9 @@ import './styles.scss'
 export default function Header() {
 	return (
 		<div className='header'>
-			<p>Header</p>
+			<div className="wrapper">
+				<p>Header</p>
+			</div>
 		</div>
 	)
 }
