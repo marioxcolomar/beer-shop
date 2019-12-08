@@ -22,7 +22,7 @@ class Shop extends Component {
 										key={i}
 										imgSrc={b.image_url}
 										name={b.name}
-										description={b.description}
+										price={b.price}
 									/>
 								)
 							})
