@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ShopItem from '../ShopItem'
-import ShopList from '../ShopList/index'
+import ShopItem from '../../__containers/shopItem'
+import ShopList from '../ShopList'
 
 class Shop extends Component {
 	componentDidMount() {
