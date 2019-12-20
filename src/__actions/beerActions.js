@@ -1,6 +1,6 @@
-export const FETCH_BEERS_BEGIN = "FETCH_BEERS_BEGIN";
-export const FETCH_BEERS_SUCCESS = "FETCH_BEERS_SUCCESS";
-export const FETCH_BEERS_FAILURE = "FETCH_BEERS_FAILURE";
+export const FETCH_BEERS_BEGIN = 'FETCH_BEERS_BEGIN';
+export const FETCH_BEERS_SUCCESS = 'FETCH_BEERS_SUCCESS';
+export const FETCH_BEERS_FAILURE = 'FETCH_BEERS_FAILURE';
 
 export const fetchBeersBegin = () => ({
 	type: FETCH_BEERS_BEGIN
@@ -23,8 +23,8 @@ export function fetchBeers() {
 			.then(handleErrors)
 			.then(res => res.json())
 			.then(json => {
-        // Add price to beers
-        json.map(b => b.price = b.ebc + b.abv)
+				// Add price to beers
+				json.map(b => (b.price = (b.ebc + b.abv).toFixed()));
 				dispatch(fetchBeersSuccess(json));
 				return json;
 			})
