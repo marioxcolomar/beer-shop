@@ -19,7 +19,7 @@ export default function beerReducer(state = initialState, action) {
         error: null
       };
 
-     case FETCH_BEERS_SUCCESS:
+    case FETCH_BEERS_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -27,7 +27,7 @@ export default function beerReducer(state = initialState, action) {
         error: null
       };
 
-     case FETCH_BEERS_FAILURE:
+    case FETCH_BEERS_FAILURE:
       return {
         ...state,
         loading: false,
