@@ -1,7 +1,19 @@
 .header {
-  height: 100%;
-  background-color: #363855;
+	padding: 15px;
+	height: 100%;
+	background-color: #363855;
 	color: #fff;
 	position: sticky;
 	top: 0;
+	svg {
+		margin: 5px 20px;
+	}
+	.cart-qty {
+		font-size: 12px;
+		margin-left: -20px;
+	}
+	div {
+		display: flex;
+		justify-content: flex-end;
+	}
 }
