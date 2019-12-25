@@ -4,7 +4,8 @@ import { MdFavorite } from "react-icons/md";
 
 import "./styles.scss";
 
-const ShopItem = ({ imgSrc, name, price }) => {
+const ShopItem = ({ beerId, imgSrc, name, price, shopActions }) => {
+	const { addToCart, addToWhislist } = shopActions
 	return (
 		<div id="item-card">
 			<img alt={imgSrc} src={imgSrc} />
@@ -12,10 +13,10 @@ const ShopItem = ({ imgSrc, name, price }) => {
 			<p>
 				<i>$ {price}</i>
 			</p>
-			<button type="button">
+			<button type="button" onClick={() => addToCart(beerId)}>
 				<FaCartPlus />
 			</button>
-			<button type="button" style={{ backgroundColor: "#CD5C5C" }}>
+			<button type="button" onClick={() => addToWhislist(beerId)} style={{ backgroundColor: "#CD5C5C" }}>
 				<MdFavorite />
 			</button>
 		</div>
