@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Shop from './__containers/shop'
-import Header from './components/Header/index';
+import Header from './__containers/header';
 
 class App extends React.Component {
   render() {
