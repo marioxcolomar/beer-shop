@@ -19,6 +19,7 @@ class Shop extends Component {
 							beers && beers.map((b, i) => {
 								return (
 									<ShopItem
+										beerId={b.id}
 										key={i}
 										imgSrc={b.image_url}
 										name={b.name}
